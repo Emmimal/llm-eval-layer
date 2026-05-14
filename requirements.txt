@@ -1,0 +1,21 @@
+# LLM Eval Layer — Dependencies
+# Core functionality runs on stdlib + numpy only.
+# Optional dependencies unlock additional features.
+
+# ── Required ─────────────────────────────────────────────────────────────────
+numpy>=1.24.0
+
+# ── Optional: semantic embeddings (recommended for production) ───────────────
+# Without this, the system falls back to TF-IDF vectors with a warning.
+# sentence-transformers>=2.2.0
+
+# ── Optional: LLM-as-judge fallback ─────────────────────────────────────────
+# Required only when use_llm_judge=True in EvalPipeline.
+# openai>=1.0.0
+
+# ── Optional: config loading ─────────────────────────────────────────────────
+# Without this, default weights/thresholds are used from code.
+# pyyaml>=6.0
+
+# ── Development ──────────────────────────────────────────────────────────────
+# pytest>=7.0.0

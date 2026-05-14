@@ -354,18 +354,22 @@ and `to_dict()` serialisation.
 ```
 llm-eval-layer/
 ├── eval_engine/
-│   ├── pipeline.py       # EvalPipeline — orchestrates all steps + decision layer
+│   ├── __init__.py
 │   ├── aggregator.py     # weighted score combination + hard floors
+│   ├── pipeline.py       # EvalPipeline — orchestrates all steps + decision layer
 │   └── regression.py    # CI/CD regression suite
 ├── scorers/
+│   ├── __init__.py
 │   ├── faithfulness.py   # attribution + specificity (hallucination detection)
 │   ├── relevance.py      # sentence-level query relevance
 │   ├── context.py        # context precision + recall
 │   └── consistency.py    # paraphrase stability (optional)
 ├── heuristics/
+│   ├── __init__.py
 │   ├── embeddings.py     # sentence-transformers with TF-IDF fallback
 │   └── similarity.py     # cosine, token overlap, recall, precision helpers
 ├── llm_judge/
+│   ├── __init__.py
 │   ├── judge.py          # OpenAI fallback (edge cases only)
 │   └── prompts.py        # versioned prompt templates
 ├── configs/
@@ -379,6 +383,7 @@ llm-eval-layer/
 ├── tests/
 │   └── test_eval.py
 └── main.py               # quick start
+└── requirements.txt
 ```
 
 ---

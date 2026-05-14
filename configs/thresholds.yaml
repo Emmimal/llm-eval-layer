@@ -1,0 +1,22 @@
+# Confidence gating thresholds
+# When a heuristic score falls below these thresholds,
+# the system escalates to LLM-as-judge
+
+# Heuristic confidence gate: below this → escalate to LLM judge
+llm_escalation_threshold: 0.50
+
+# Decision layer thresholds (decision_layer() in pipeline.py)
+# REJECT  : final_score < reject_threshold  OR hallucination detected
+# REVIEW  : reject_threshold <= final_score < review_threshold
+# ACCEPT  : final_score >= review_threshold AND no hallucination
+reject_threshold: 0.45
+review_threshold: 0.65
+
+# Minimum acceptable scores per dimension (below these → flag as failing)
+faithfulness_min: 0.40
+relevance_min: 0.45
+context_quality_min: 0.35
+consistency_min: 0.70
+
+# Final score threshold: below this → response is considered low quality
+final_score_min: 0.45

@@ -1,0 +1,11 @@
+# Scoring weights for final score aggregation
+# Must sum to 1.0
+# Adjust these based on your use case:
+#   - For RAG systems: increase faithfulness weight
+#   - For chatbots: increase relevance weight
+#   - For factual QA: increase faithfulness, decrease consistency
+
+faithfulness: 0.40
+relevance: 0.30
+context_quality: 0.20
+consistency: 0.10

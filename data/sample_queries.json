@@ -1,0 +1,37 @@
+[
+  {
+    "id": "q_001",
+    "query": "What is context engineering?",
+    "context": "Context engineering is the architectural layer between retrieval and generation that controls what information flows into the LLM context window, how much of it, and in what form. It includes memory management, compression, re-ranking, and token budget enforcement.",
+    "response": "Context engineering is a layer that sits between retrieval and generation. It controls what information the model receives, how it's compressed, and in what order — ensuring the model always gets relevant, coherent context within its token budget.",
+    "label": "good_response"
+  },
+  {
+    "id": "q_002",
+    "query": "What is context engineering?",
+    "context": "Context engineering is the architectural layer between retrieval and generation that controls what information flows into the LLM context window, how much of it, and in what form. It includes memory management, compression, re-ranking, and token budget enforcement.",
+    "response": "Context engineering was invented in 2019 by researchers at Stanford. It is primarily used for image generation and computer vision tasks. The technique involves training new neural networks from scratch.",
+    "label": "hallucinated_response"
+  },
+  {
+    "id": "q_003",
+    "query": "How does exponential decay help with memory management?",
+    "context": "Exponential decay in memory management allows older conversation turns to fade continuously based on age, importance, and recency of access. High-importance turns survive longer while low-importance small-talk fades quickly.",
+    "response": "Exponential decay makes older turns gradually less influential over time. Important turns about the main topic survive longer, while casual small-talk fades — this prevents context bloat without abruptly dropping recent history.",
+    "label": "good_response"
+  },
+  {
+    "id": "q_004",
+    "query": "What is the capital of France?",
+    "context": "Context engineering controls what enters the LLM context window. It uses memory decay, compression, and re-ranking to manage token budgets efficiently.",
+    "response": "The capital of France is Paris. Paris has been the capital since the 10th century and is home to landmarks like the Eiffel Tower.",
+    "label": "off_context_response"
+  },
+  {
+    "id": "q_005",
+    "query": "How does hybrid retrieval work?",
+    "context": "Hybrid retrieval combines keyword matching and dense vector embeddings. The hybrid score is calculated as: hybrid_score = alpha * embedding_score + (1 - alpha) * tfidf_score. The alpha value of 0.65 weights embeddings slightly more than TF-IDF.",
+    "response": "Hybrid retrieval blends two methods: keyword/TF-IDF matching and dense vector embeddings. The scores are combined using a weighted formula where alpha controls the balance. A higher alpha favors semantic embeddings; a lower alpha favors keyword precision.",
+    "label": "good_response"
+  }
+]

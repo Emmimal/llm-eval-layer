@@ -11,7 +11,7 @@ This library handles what comes next — deciding whether that output should be 
 retried, or regenerated, and telling you exactly why.
 
 Read the full write-up on Towards Data Science →
-**[LLM Evals Are Based on Vibes — I Built the Missing Scoring Layer That Actually Decides What to Ship](https://towardsdatascience.com)**
+**[LLM Evals Are Based on Vibes — I Built the Missing Scoring Layer That Actually Decides What to Ship]([https://towardsdatascience.com](https://towardsdatascience.com/llm-evals-are-based-on-vibes-i-built-the-missing-layer-that-decides-what-ships/))**
 
 ---
 
